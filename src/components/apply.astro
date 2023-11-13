@@ -1,0 +1,88 @@
+---
+
+---
+
+<div class="apply_box">
+    <div id="apply"></div>
+    <div class="apply_left">
+        <h2>Tilmelding</h2>
+        <form>
+            <label for="username">Dit navn</label><br>
+            <input name="username" type="text" required><br>
+
+            <label for="usermail">Din e-mail</label><br>
+            <input name="usermail" type="email" required><br>
+
+            <label for="stud_start">Uddannelses Start</label><br>
+            <input type="date" name="stud_start"><br>
+            <label for="stud_slut">Uddannelses Slut</label><br>
+            <input type="date" name="stud_slut"><br>
+
+            <label for="userpack">Pakke</label><br>
+            <select name="userpack">
+                <option value="1">Multimediedesigner Pakke</option>
+                <option value="2">KEA Uddannelse Pakke</option>
+                <option value="3">Fyn Uddannelse Pakke</option>
+            </select><br>
+
+            <input type="checkbox" name="newsletter" checked>
+            <label for="newsletter"> Jeg ønsker at modtage nyhedsbrev</label><br>
+
+            <input type="submit" name="apply_send" value="Tilmeld">
+        </form>
+    </div>
+    <div class="apply_right">
+        <div class="apply_right_inner">
+            <h3>Karrierestart pakke registrering</h3>
+            <p>Her kan du tilmelde dig til vores startpakke. Vær opmærksom på at det er ikke en medlemskab hos CA a-kasse og det er gratis. Når du er klar til at blive en medlem af a-kasse, du kan altid skifte til medlemskab.</p>
+            <p>Når du er færdig med formularen, så klik tilmeld - du får bagefter en mail hvor du skal bekræfte din registrering.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    #apply {
+        position: absolute;
+        top: -100px;
+    }
+    h2 {
+        margin-bottom: 50px;
+    }
+    .apply_box {
+        position: relative;
+        width: 80%;
+        margin: 80px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    input[type=text], input[type=email], input[type=submit], select {
+        border: 1px solid #666;
+        width: 100%;
+        height: 40px;
+        margin-bottom: 30px;
+    }
+    input[type=date] {
+        height: 40px;
+        margin-bottom: 30px;
+        border: 1px solid #666;
+    }
+    input[type=submit] {
+        padding: 30px;
+        margin-top: 50px;
+        height: auto;
+        background-color: #084b7c;
+        border: 0;
+        color: white;
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+    .apply_right_inner {
+        background-color: #0a79ae;
+        padding: 30px;
+        color: white;
+    }
+    p {
+        margin-top: 50px;
+    }
+</style>

@@ -1,0 +1,68 @@
+---
+
+---
+
+<div class="wrapper">
+    <div class="pack">
+        <div class="pack_img">
+            <img src="img/mmd.png" alt="code">
+        </div>
+        <div class="pack_txt">
+            <h2>Multimediedesigner pakke</h2>
+            <p>Denne pakke er til dig som læser Multimediedesigner på KEA</p>
+            <a href="#" onclick="scrollToAnchor('#apply');">Tilmeld</a>
+        </div>
+    </div>
+    <div class="pack">
+        <div class="pack_img">
+            <img src="img/kea.png" alt="code">
+        </div>
+        <div class="pack_txt">
+            <h2>KEA uddannelser pakke</h2>
+            <p>Denne pakke er til dig som går på KEA</p>
+            <a href="#" onclick="scrollToAnchor('#apply');">Tilmeld</a>
+        </div>
+    </div>
+    <div class="pack">
+        <div class="pack_img">
+            <img src="img/mmd.png" alt="code">
+        </div>
+        <div class="pack_txt">
+            <h2>Uddannelse på Fyn pakke</h2>
+            <p>Denne pakke er til dig som tager uddannelsen på Fyn</p>
+            <a href="#" onclick="scrollToAnchor('#apply');">Tilmeld</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        width: 80%;
+        margin: 80px auto;
+    }
+    .pack {
+        border: 1px solid #666;
+        background-color: white;
+    }
+    .pack_txt {
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 100px auto;
+    }
+    .pack_img img {
+        width: 100%;
+    }
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        background-color: #0a79ae;
+        padding: 30px;
+        font-size: 20px;
+    }
+</style>
