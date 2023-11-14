@@ -2,7 +2,8 @@
 
 ---
 
-<div class="navmenu_box">
+<a href="#" class="burger_btn" id="burger_btn"><i class="fa-solid fa-bars"></i></a>
+<div class="navmenu_box" id="navmenu_box">
     <div class="logo">
         <img src="img/CA_logo.svg" alt="logo">
     </div>
@@ -21,6 +22,17 @@
 </div>
 
 <style>
+    .burger_btn {
+        color: black;
+        background-color: #e6e6de;
+        padding: 10px 12px 8px 12px;
+        border: 1px solid #666;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        display: none;
+        z-index: 2;
+    }
     .navmenu_box {
         display: grid;
         grid-template-columns: 2fr 3fr 1fr;
@@ -30,6 +42,7 @@
         width: 100%;
         background-color: #e6e6de;
         z-index: 1;
+        transition: all .3s;
     }
     .logo img {
         width: 60%;
@@ -55,6 +68,39 @@
         background-color: #084b7c;
         color: white;
     }
+    .visible {
+        top: 0 !important;
+    }
+    @media screen and (max-width: 1200px) {
+        .burger_btn {
+            display: block;
+        }
+        .navmenu_box {
+            grid-template-columns: 1fr;
+            top: -500px;
+        }
+        .navmenu {
+            text-align: center;
+        }
+        .logo {
+            display: none;
+        }
+        .mitca_box {
+            background-color: #e6e6de;
+            text-align: center;
+        }
+        .mitca a {
+            background-color: transparent;
+            color: black;
+            margin-bottom: 30px;
+        }
+        .navmenu li {
+            margin-bottom: 30px;
+        }
+        ul {
+            flex-direction: column;
+        }
+    }
 </style>
 
 <script is:inline>
@@ -62,4 +108,9 @@
         event.preventDefault();
         document.querySelector(element).scrollIntoView({behavior: "smooth"});
     }
+    function toggleMenu() {
+        event.preventDefault();
+        document.querySelector("#navmenu_box").classList.toggle("visible");
+    }
+    document.querySelector("#burger_btn").addEventListener("click", toggleMenu);
 </script>
